@@ -85,3 +85,7 @@ body {
 .stretch {
     align-items: stretch;
 }
+
+.font-inherit {
+    font-family: inherit;
+}
