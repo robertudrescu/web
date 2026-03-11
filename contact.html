@@ -2,23 +2,17 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Contact</title>
 
     <link rel="stylesheet" href="style.css">
 
-    <style>   
-        #img1 {
-            width: 370px;
-        }
-
+    <style>
         div {
-            background-color: wheat;
+            background-color: darkolivegreen;
         }
     </style>
-
 </head>
 
 <body>
@@ -41,39 +35,64 @@
 
         </div>
 
-        <div class="horizontal-box  padding-1 space-between">
-            <h1>Home</h1>
+        <div class="horizontal-box padding-1 space-between">
+
+            <div class="horizontal-box">
+                <a href="">
+                    <h1>About</h1>
+                </a>
+                <h1>></h1>
+                <h1>Contact</h1>
+            </div>
             <input class="font" type="text" placeholder="Search">
         </div>
 
-        <div class="horizontal-box padding-1">
+        <div class="horizontal-box">
 
-            <div class="vertical-box">
-                <h2>Title</h2>
-                <p>A text is a passage of words that conveys a set of meanings to the person who is reading it. It's a
-                    body of written work, in various forms and structures, that can be words, phrases and sentences that
-                    piece together a passage of written work.</p>
+            <div class="vertical-box padding-1">
+                <a href="">Team</a>
+                <a href="">Location</a>
+                <a href="">Contact</a>
             </div>
 
-            <div>
-                <img id="img1" src="https://i.redd.it/95dyd2k1dfr61.png" alt="image">
-            </div>
+            <div class="vertical-box padding-1 flexgrow">
 
-        </div>
+                <div class="vertical-box padding-5 stretch">
 
-        <div class="vertical-box padding-1">
+                    <div class="horizontal-box center">
+                        <h2>Title</h2>
+                    </div>
 
-            <div>
-                <h2>Title</h2>
-            </div>
+                    <form class="vertical-box">
 
-            <div class="horizontal-box">
-                <img id="img1"
-                    src="https://t3.ftcdn.net/jpg/10/41/20/72/360_F_1041207220_GV6Dud24stx6iexJw4c73LqlgkkwvaXn.jpg"
-                    alt="image">
-                <p>A text is a passage of words that conveys a set of meanings to the person who is reading it. It's a
-                    body of written work, in various forms and structures, that can be words, phrases and sentences that
-                    piece together a passage of written work.</p>
+                        <div class="vertical-box stretch">
+
+                            <div class="horizontal-box">
+
+                                <div class="vertical-box flexgrow">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name">
+                                </div>
+
+                                <div class="vertical-box flexgrow">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email">
+                                </div>
+
+                            </div>
+
+                            <label for="message">Message</label>
+                            <textarea rows="5" type="text" id="message" name="message"></textarea>
+                        </div>
+
+                        <div class="horizontal-box center">
+                            <input class="font" type="submit" value="Submit">
+                        </div>
+
+                    </form>
+
+                </div>
+
             </div>
 
         </div>
