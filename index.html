@@ -2,185 +2,120 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
+
+    <link rel="stylesheet" href="style.css">
 
     <style>
-        .horizontal-box {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .vertical-box {
-            display: flex;
-            gap: 1rem;
-            flex-direction: column;
-        }
-
-        .padding-1 {
-            padding: 1rem;
-        }
-
-        .space-between {
-            justify-content: space-between;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            margin: 0;
-        }
-
-        #img1 {
-            width: 370px;
-        }
-
-        .header {
-            display: flex;
-            gap: 1rem;
-            padding: 1rem;
-            justify-content: space-between;
-        }
-
-        .footer {
-            display: flex;
-            gap: 1rem;
-            width: 100%;
-            max-width: 100%;
-        }
-
-        .links {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            flex: 1;
-        }
-
-        div {
-            background-color: #d0f1f0;
-        }
-
-        .flxgrw {
-            flex: 1;
-        }
-
-        .space {
-            gap: 1rem;
-        }
-
-        .content {
-            max-width: 800px;
-            display: flex;
-            flex-direction: column;
-        }
-
         body {
-            display: flex;
-            justify-content: center;
+            background-color: #FFFEF0;
         }
     </style>
-
 
 </head>
 
 <body>
-    <div class="content">
+
+    <div class="content font">
+
         <div class="header">
 
-            <div class="horizontal-box">
-                <img src="https://brandlogos.net/wp-content/uploads/2019/01/dji-logo_brandlogos.net_21dtj-512x303.png"
-                    alt="Logo" width="175px">
-                <a href="">Home</a>
-                <a href="">Games</a>
-                <a href="">About</a>
+            <div>
+                <img src="" alt="image" width="100px">
+                <a href="home.html">Home</a>
+                <a href="games.html">Games</a>
+                <a href="about.html">About</a>
             </div>
 
-            <div class="horizontal-box">
-                <a href="">Register</a>
-                <a href="">Login</a>
-
+            <div>
+                <a href="register.html">Register</a>
+                <a href="login.html">Login</a>
             </div>
 
         </div>
 
-        <div class="horizontal-box padding-1 space-between">
+        <div class="horizontal-box  padding-1 space-between">
             <h1>Home</h1>
 
-            <input type="text" placeholder="Search">
+            <div class="search-bar">
+                <input class="font" type="text" placeholder="Search">
+            </div>
+
         </div>
 
-        <div class="horizontal-box padding-1">
-            <div class="vertical-box">
-                <h3>DJI Neo 2</h3>
-                <p>DJI Neo 2 is DJI’s most compact drone [1] equipped with omnidirectional obstacle sensing [2] and
-                    features such as gesture control [3], SelfieShot, and ActiveTrack [4] for more creative ways to fly.
-                    Even beginners can get started effortlessly. Think of it as your personal follow-me camera drone,
-                    always ready to capture your most exciting moments.
-                </p>
-            </div>
-            <div>
-                <img id="img1" src="https://www.maisondudrone.com/wp-content/uploads/2025/11/dji-neo-2-test.jpg"
-                    alt="X">
-            </div>
-        </div>
+        <div class="card-1 padding-1">
 
-        <div class="vertical-box padding-1">
+            <div class="align-center">
+                <h2>Title</h2>
+                <p>A text is a passage of words that conveys a set of meanings to the person who is reading it. It's a
+                    body of written work, in various forms and structures, that can be words, phrases and sentences that
+                    piece together a passage of written work.</p>
+            </div>
 
             <div>
-                <h3>DJI Air 3<span style="font-weight: lighter;">S</span></h3>
-                <p style="font-size: 1.17em;">DJI Air 3S</p>
+                <img id="img1" src="https://i.redd.it/95dyd2k1dfr61.png" alt="image">
             </div>
 
-            <div class="horizontal-box">
-                <img id="img1" src="https://www.diyphotography.net/wp-content/uploads/2024/10/dji-air3s-01.jpg" alt="X">
-
-                <p>A dual-camera drone designed for travel photography, DJI Air 3S integrates a suite of advanced
-                    technologies. Featuring a 1-inch-CMOS primary camera and a 70mm medium tele camera, each with up to
-                    14 stops of dynamic range, [1] Air 3S captures landscapes, portraits, and more in stunning detail.
-                    Both cameras support the new Free panorama feature, which allows flexible shooting-range selections.
-                    Additional new highlights include nightscape obstacle sensing [2] and next-gen Smart RTH for
-                    enhanced safety during nighttime photography. In each and every way, DJI Air 3S is designed to
-                    maximize every aerial moment.
-                </p>
-
-            </div>
         </div>
 
-        <div class="footer">
-            <div class="flxgrw">
-                <h4>DJI</h4>
-                <p> Your First Stop for Drones — Your first choice for drones. Fly safe and smart with the best drone
-                    camera. Delivery with After-Sale service. Safe payment process and great value for money.
-                    Categories:
-                    Spark, Mavic, Phantom.
-                </p>
+        <div class="card-1 padding-1 align-center">
+
+            <div class=" align-center">
+                <h2>Title</h2>
+                <img id="img1"
+                    src="https://t3.ftcdn.net/jpg/10/41/20/72/360_F_1041207220_GV6Dud24stx6iexJw4c73LqlgkkwvaXn.jpg"
+                    alt="image">
             </div>
 
-            <div class="links">
-                <div class="vertical-box">
-                    <a href="">Home</a>
-                    <a href="">Games</a>
-                    <a href="">About</a>
+            <div>
+                <p>A text is a passage of words that conveys a set of meanings to the person who is reading it. It's a
+                    body of written work, in various forms and structures, that can be words, phrases and sentences that
+                    piece together a passage of written work.</p>
+            </div>
+
+        </div>
+
+        <div class="footer align-center padding-1">
+
+            <div class="vertical-box align-center flexbasis">
+
+                <h2>Title</h2>
+                <p>A text is a passage of words that conveys a set of meanings to the person who is reading it.
+                    It's
+                    a
+                    body of written work, in various forms and structures, that can be words, phrases and
+                    sentences
+                    that
+                    piece together a passage of written work.</p>
+
+            </div>
+
+            <div class="horizontal-box align-center flexgrow">
+
+                <div class="vertical-box links align-center flexgrow">
+                    <a href="home.html">Home</a>
+                    <a href="games.html">Games</a>
+                    <a href="about.html">About</a>
                     <div class="space"></div>
-                    <a href="">Register</a>
-                    <a href="">Login</a>
+                    <a href="register.html">Register</a>
+                    <a href="login.html">Login</a>
                 </div>
-            </div>
 
-            <div class="links">
-                <div class="vertical-box">
+                <div class="vertical-box links align-center flexgrow">
                     <a href="">Facebook</a>
                     <a href="">Linkedln</a>
                     <a href="">Github</a>
                 </div>
+
             </div>
+
         </div>
+
     </div>
+
 </body>
 
 </html>
