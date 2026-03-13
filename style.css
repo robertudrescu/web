@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Luminari;
+    src: url(Luminari-Regular.ttf);
+}
+
+
+.font {
+    font-family: Luminari;
+}
+
 .horizontal-box {
     display: flex;
     gap: 1rem;
@@ -82,10 +92,6 @@ h4,
 h5,
 h6 {
     margin: 0;
-}
-
-.font {
-    font-family: Luminari;
 }
 
 body {
@@ -175,6 +181,7 @@ body {
     display: flex;
     gap: 1rem;
     flex-direction: column;
+    
 }
 
 @media (max-width: 600px) {
