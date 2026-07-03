@@ -17,3 +17,24 @@ trebuie sa pui for la label input
 # complementary colors
 
     https://www.canva.com/colors/color-wheel/
+
+
+# operator
+    
+    count = count + 1
+    count += 1
+    count++    
+
+# parameter
+
+    variable of function
+
+    ex: function hello(name) {}
+
+    name is a parameter in example
+
+
+# variables
+
+
+

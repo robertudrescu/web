@@ -8,6 +8,10 @@
     font-family: Luminari;
 }
 
+.text-white {
+    color: white;
+}
+
 .horizontal-box {
     display: flex;
     gap: 1rem;
@@ -264,4 +268,53 @@ iframe {
         width: 300px;
         height: 220px;
     }
+}
+
+.img-width1 {
+
+    width: 500px;
+
+}
+
+@media (max-width: 600px) {
+
+    .img-width1 {
+
+        width: 300px;
+    
+    }
+}
+
+.img-width2 {
+
+    width: 150px;
+
+}
+
+@media (max-width: 600px) {
+
+    .img-width2 {
+
+        width: 80px;
+    
+    }
+}
+
+.img-width3 {
+
+    width: 1000px;
+
+}
+
+@media (max-width: 600px) {
+
+    .img-width3 {
+
+        width: 350px;
+    
+    }
+}
+
+.h-full {
+    height: 100vh;
 }

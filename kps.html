@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rockPaperScissors</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+
+    <script>
+
+
+        function rock() {
+
+            let randomNumber = Math.random();
+            let option = Math.floor(randomNumber * 3 + 1);
+
+
+            if (option == 2) {
+                console.log("You chose rock, computer chose paper. Computer wins.");
+
+            } else if (option == 1) {
+                console.log("You chose rock, computer chose rock. It's a draw.");
+
+            } else {
+                console.log("You chose rock, computer chose scissors. You win.");
+            }
+
+
+        }
+
+
+        function paper() {
+
+            let randomNumber = Math.random();
+            let option = Math.floor(randomNumber * 3 + 1);
+
+
+            if (option == 3) {
+                console.log("You chose paper, computer chose scissors. Computer wins.");
+
+            } else if (option == 2) {
+                console.log("You chose paper, computer chose paper. It's a draw.");
+
+            } else {
+                console.log("You chose paper, computer chose rock. You win.");
+            }
+
+
+        }
+
+
+        function scissors() {
+
+            let randomNumber = Math.random();
+            let option = Math.floor(randomNumber * 3 + 1);
+
+
+            if (option == 1) {
+                console.log("You chose scissors, computer chose rock. Computer wins.");
+
+            } else if (option == 3) {
+                console.log("You chose scissors, computer chose scissors. It's a draw.");
+
+            } else {
+                console.log("You chose scissors, computer chose paper. You win.");
+            }
+
+
+
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="center h-full font text-white">
+
+        <div class="center horizontal-box align-center">
+
+            <div class="vertical-box align-center">
+
+                <button onclick="rock()"><img class="img-width2" src="images/image copy 11.png"
+                        alt="image"></button>
+                <h2>Rock</h2>
+
+            </div>
+
+            <div class="vertical-box align-center">
+
+                <button onclick="paper()"><img class="img-width2" src="images/image copy 12.png"
+                        alt="image"></button>
+                <h2>Paper</h2>
+
+            </div>
+
+            <div class="vertical-box align-center">
+
+                <button onclick="scissors()"><img class="img-width2" src="images/image copy 13.png"
+                        alt="image"></button>
+                <h2>Scissors</h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
