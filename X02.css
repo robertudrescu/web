@@ -1,3 +1,49 @@
 body {
-    background-color: rgb(200, 193, 172);
+    background-color: rgb(200, 195, 175);
 }
+
+.x {
+    display: flex;
+}
+
+.y {
+    display: flex;
+    flex-direction: column;
+}
+
+.gap {
+    gap: 1rem;
+}
+
+.justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+.h-full {
+    height: 100vh;
+}
+
+button {
+    width: 10rem;
+    height: 10rem;
+    background-color: darkslategrey;
+    font-family: Luminari;
+    font-size: 4rem;
+    color: rgb(200, 195, 175);
+}
+
+@media (max-width: 550px) {
+
+    button {
+        width: 7rem;
+        height: 7rem;
+    }
+
+}
+

@@ -6,16 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>X02</title>
 
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="X02.css">
+
+    <script>
+
+        let currentSign = "x"
+
+        function play(e) {
+
+            let element = e.target
+
+            console.log("before:", element.innerHTML)
+
+
+            if (element.innerHTML == "") {
+
+                element.innerHTML = currentSign
+
+
+                if (currentSign == "x") {
+
+                    currentSign = "o"
+
+                } else if (currentSign == "o") {
+
+                    currentSign = "x"
+
+                }
+            }
+
+            console.log("after:", element.innerHTML)
+
+        }
+
+    </script>
 
 </head>
 
 <body>
 
-    <div>
+    <div class="justify-center align-center h-full">
 
-        
+        <div class="y">
+
+            <button class="lumi" onclick="play(event)"></button>
+            <button class="lumi" onclick="play(event)"></button>
+            <button class="lumi" onclick="play(event)"></button>
+
+        </div>
+
+        <div class="y">
+
+            <button class="lumi" onclick="play(event)"></button>
+            <button class="lumi" onclick="play(event)"></button>
+            <button class="lumi" onclick="play(event)"></button>
+
+        </div>
+
+        <div class="y">
+
+            <button class="lumi" onclick="play(event)"></button>
+            <button class="lumi" onclick="play(event)"></button>
+            <button class="lumi" onclick="play(event)"></button>
+
+        </div>
 
     </div>
 
