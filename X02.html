@@ -8,9 +8,45 @@
 
     <link rel="stylesheet" href="X02.css">
 
+</head>
+
+<body>
+
+    <div class="y justify-center align-center h-full">
+
+        <div class="lumi" id="message"></div>
+
+        <div class="x">
+
+            <button onclick="play(event)"></button>
+            <button onclick="play(event)"></button>
+            <button onclick="play(event)"></button>
+
+        </div>
+
+        <div class="x">
+
+            <button onclick="play(event)"></button>
+            <button onclick="play(event)"></button>
+            <button onclick="play(event)"></button>
+
+        </div>
+
+        <div class="x">
+
+            <button onclick="play(event)"></button>
+            <button onclick="play(event)"></button>
+            <button onclick="play(event)"></button>
+
+        </div>
+
+    </div>
+
     <script>
 
         let currentSign = "x"
+        let messageElement = document.getElementById("message")
+        messageElement.innerHTML = currentSign
 
         function play(e) {
 
@@ -30,53 +66,18 @@
 
                 } else if (currentSign == "o") {
 
-                    currentSign = "y"
-
-                } else if (currentSign == "y") {
-
                     currentSign = "x"
 
                 }
 
             }
 
+            let messageElement = document.getElementById("message")
+            messageElement.innerHTML = currentSign
             console.log("after:", element.innerHTML)
         }
 
-
     </script>
-
-</head>
-
-<body>
-
-    <div class="justify-center align-center h-full">
-
-        <div class="y">
-
-            <button class="lumi" onclick="play(event)"></button>
-            <button class="lumi" onclick="play(event)"></button>
-            <button class="lumi" onclick="play(event)"></button>
-
-        </div>
-
-        <div class="y">
-
-            <button class="lumi" onclick="play(event)"></button>
-            <button class="lumi" onclick="play(event)"></button>
-            <button class="lumi" onclick="play(event)"></button>
-
-        </div>
-
-        <div class="y">
-
-            <button class="lumi" onclick="play(event)"></button>
-            <button class="lumi" onclick="play(event)"></button>
-            <button class="lumi" onclick="play(event)"></button>
-
-        </div>
-
-    </div>
 
 </body>
 
