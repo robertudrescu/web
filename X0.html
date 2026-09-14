@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X0</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="X0.css">
+
+    <script>
+
+        let currentSign = "x"
+
+        function play(e) {
+
+            let element = e.target
+
+            console.log("before:", element.innerHTML)
+
+
+            if (element.innerHTML == "") {
+
+                element.innerHTML = currentSign
+
+
+                if (currentSign == "x") {
+
+                    currentSign = "o"
+
+                } else if (currentSign == "o") {
+
+                    currentSign = "x"
+
+                }
+
+            }
+
+            console.log("after:", element.innerHTML)
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="vertical-box  center h-full">
+
+        <div class="horizontal-box">
+
+            <button class="button-size" onclick="play(event)"></button>
+            <button class="button-size" onclick="play(event)"></button>
+            <button class="button-size" onclick="play(event)"></button>
+
+        </div>
+
+        <div class="horizontal-box">
+
+            <button class="button-size" onclick="play(event)"></button>
+            <button class="button-size" onclick="play(event)"></button>
+            <button class="button-size" onclick="play(event)"></button>
+
+        </div>
+
+        <div class="horizontal-box">
+
+            <button class="button-size" onclick="play(event)"></button>
+            <button class="button-size" onclick="play(event)"></button>
+            <button class="button-size" onclick="play(event)"></button>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
