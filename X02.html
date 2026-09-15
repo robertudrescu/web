@@ -18,31 +18,31 @@
 
         <div class="x">
 
-            <button class="button" onclick="play(event)"></button>
-            <button class="button" onclick="play(event)"></button>
-            <button class="button" onclick="play(event)"></button>
+            <button class="button" id="1" onclick="play(event)"></button>
+            <button class="button" id="2" onclick="play(event)"></button>
+            <button class="button" id="3" onclick="play(event)"></button>
 
         </div>
 
         <div class="x">
 
-            <button class="button" onclick="play(event)"></button>
-            <button class="button" onclick="play(event)"></button>
-            <button class="button" onclick="play(event)"></button>
+            <button class="button" id="4" onclick="play(event)"></button>
+            <button class="button" id="5" onclick="play(event)"></button>
+            <button class="button" id="6" onclick="play(event)"></button>
 
         </div>
 
         <div class="x">
 
-            <button class="button" onclick="play(event)"></button>
-            <button class="button" onclick="play(event)"></button>
-            <button class="button" onclick="play(event)"></button>
+            <button class="button" id="7" onclick="play(event)"></button>
+            <button class="button" id="8" onclick="play(event)"></button>
+            <button class="button" id="9" onclick="play(event)"></button>
 
         </div>
 
         <div class="gap padding">
 
-            <button class="button2 gap" onclick="restart(event)">Restart</button>
+            <button class="button2 gap" id="restart" onclick="restart(event)">Restart</button>
 
         </div>
 
@@ -55,12 +55,26 @@
         messageElement.innerHTML = currentSign
 
         function restart(i) {
- 
+
             console.log("Restart")
-            messageElement.innerHTML= "x"
+            messageElement.innerHTML = "x"
             currentSign = "x"
-            
+            let restart
+            restart = document.getElementById("restart")
+            restart.setAttribute("class", "hide")
+
+            document.getElementById("1").innerHTML = ""
+            document.getElementById("2").innerHTML = ""
+            document.getElementById("3").innerHTML = ""
+            document.getElementById("4").innerHTML = ""
+            document.getElementById("5").innerHTML = ""
+            document.getElementById("6").innerHTML = ""
+            document.getElementById("7").innerHTML = ""
+            document.getElementById("8").innerHTML = ""
+            document.getElementById("9").innerHTML = ""
+
         }
+
 
         function play(e) {
 
@@ -68,11 +82,31 @@
 
             console.log("before:", element.innerHTML)
 
+            let restart
+            restart = document.getElementById("restart")
+            restart.setAttribute("class", "hide")
 
             if (element.innerHTML == "") {
 
                 element.innerHTML = currentSign
 
+                if ((document.getElementById("1").innerHTML == "x" || document.getElementById("1").innerHTML == "o") &&
+                    (document.getElementById("2").innerHTML == "x" || document.getElementById("2").innerHTML == "o") &&
+                    (document.getElementById("3").innerHTML == "x" || document.getElementById("3").innerHTML == "o") &&
+                    (document.getElementById("4").innerHTML == "x" || document.getElementById("4").innerHTML == "o") &&
+                    (document.getElementById("5").innerHTML == "x" || document.getElementById("5").innerHTML == "o") &&
+                    (document.getElementById("6").innerHTML == "x" || document.getElementById("6").innerHTML == "o") &&
+                    (document.getElementById("7").innerHTML == "x" || document.getElementById("7").innerHTML == "o") &&
+                    (document.getElementById("8").innerHTML == "x" || document.getElementById("8").innerHTML == "o") &&
+                    (document.getElementById("9").innerHTML == "x" || document.getElementById("9").innerHTML == "o")) {
+
+                    restart.setAttribute("class", "show gap button2")
+
+                } else {
+
+                    restart.setAttribute("class", "hide ")
+
+                }
 
                 if (currentSign == "x") {
 
@@ -89,6 +123,7 @@
             let messageElement = document.getElementById("message")
             messageElement.innerHTML = currentSign
             console.log("after:", element.innerHTML)
+
         }
 
     </script>

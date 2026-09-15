@@ -49,3 +49,12 @@ trebuie sa pui for la label input
     - consume bone broth
     - fix anterior pelvic tilt (ex: back extensions, lunge stretch)
     - dead hang (better with hook grip attachments)
+
+# Display: none
+
+    element disappears
+
+# setAttribute
+
+    getElement.setAttribute("name of attribute", "value of attribute")
+
