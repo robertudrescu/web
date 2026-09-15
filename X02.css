@@ -15,6 +15,10 @@ body {
     gap: 1rem;
 }
 
+.padding {
+    padding: 1rem;
+}
+
 .justify-center {
     display: flex;
     justify-content: center;
@@ -29,7 +33,7 @@ body {
     height: 100vh;
 }
 
-button {
+.button {
     width: 10rem;
     height: 10rem;
     background-color: darkslategrey;
@@ -40,7 +44,7 @@ button {
 
 @media (max-width: 550px) {
 
-    button {
+    .button {
         width: 7rem;
         height: 7rem;
     }
@@ -50,4 +54,23 @@ button {
 .lumi {
     font-family: Luminari;
     font-size: 4rem;
+}
+
+.button2 {
+    width: 13rem;
+    height: 6rem;
+    background-color: darkslategrey;
+    font-family: Luminari;
+    font-size: 2.6rem;
+    color: rgb(200, 195, 175);
+}
+
+@media (max-width: 550px) {
+
+    .button2 {
+        width: 10rem;
+        height: 4rem;
+        font-size: 2rem;
+    }
+
 }

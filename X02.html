@@ -18,25 +18,31 @@
 
         <div class="x">
 
-            <button onclick="play(event)"></button>
-            <button onclick="play(event)"></button>
-            <button onclick="play(event)"></button>
+            <button class="button" onclick="play(event)"></button>
+            <button class="button" onclick="play(event)"></button>
+            <button class="button" onclick="play(event)"></button>
 
         </div>
 
         <div class="x">
 
-            <button onclick="play(event)"></button>
-            <button onclick="play(event)"></button>
-            <button onclick="play(event)"></button>
+            <button class="button" onclick="play(event)"></button>
+            <button class="button" onclick="play(event)"></button>
+            <button class="button" onclick="play(event)"></button>
 
         </div>
 
         <div class="x">
 
-            <button onclick="play(event)"></button>
-            <button onclick="play(event)"></button>
-            <button onclick="play(event)"></button>
+            <button class="button" onclick="play(event)"></button>
+            <button class="button" onclick="play(event)"></button>
+            <button class="button" onclick="play(event)"></button>
+
+        </div>
+
+        <div class="gap padding">
+
+            <button class="button2 gap" onclick="restart(event)">Restart</button>
 
         </div>
 
@@ -47,6 +53,14 @@
         let currentSign = "x"
         let messageElement = document.getElementById("message")
         messageElement.innerHTML = currentSign
+
+        function restart(i) {
+ 
+            console.log("Restart")
+            messageElement.innerHTML= "x"
+            currentSign = "x"
+            
+        }
 
         function play(e) {
 
