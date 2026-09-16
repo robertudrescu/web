@@ -56,7 +56,7 @@
 
         function restart() {
 
-            console.log("Restart")
+            console.log("restart")
             messageElement.innerHTML = "x"
             currentSign = "x"
             let restart
@@ -132,7 +132,8 @@
 
                 }
             }
-            // This is to check is there is a winner after the winner has placed the last sign
+
+            console.log("after:", element.innerHTML)
 
             if ((document.getElementById("1").innerHTML == "x" && document.getElementById("2").innerHTML == "x" && document.getElementById("3").innerHTML == "x") ||
                 (document.getElementById("4").innerHTML == "x" && document.getElementById("5").innerHTML == "x" && document.getElementById("6").innerHTML == "x") ||
@@ -145,6 +146,7 @@
 
                 restart.setAttribute("class", "show gap button2")
                 currentSign = "x wins"
+                console.log("x wins")
 
             } else if ((document.getElementById("1").innerHTML == "o" && document.getElementById("2").innerHTML == "o" && document.getElementById("3").innerHTML == "o") ||
                 (document.getElementById("4").innerHTML == "o" && document.getElementById("5").innerHTML == "o" && document.getElementById("6").innerHTML == "o") ||
@@ -156,8 +158,25 @@
                 (document.getElementById("3").innerHTML == "o" && document.getElementById("5").innerHTML == "o" && document.getElementById("7").innerHTML == "o")) {
 
                 restart.setAttribute("class", "show gap button2")
-               currentSign = "o wins"
+                currentSign = "o wins"
+                console.log("o wins")
+
+            } else if ((document.getElementById("1").innerHTML == "x" || document.getElementById("1").innerHTML == "o") &&
+                (document.getElementById("2").innerHTML == "x" || document.getElementById("2").innerHTML == "o") &&
+                (document.getElementById("3").innerHTML == "x" || document.getElementById("3").innerHTML == "o") &&
+                (document.getElementById("4").innerHTML == "x" || document.getElementById("4").innerHTML == "o") &&
+                (document.getElementById("5").innerHTML == "x" || document.getElementById("5").innerHTML == "o") &&
+                (document.getElementById("6").innerHTML == "x" || document.getElementById("6").innerHTML == "o") &&
+                (document.getElementById("7").innerHTML == "x" || document.getElementById("7").innerHTML == "o") &&
+                (document.getElementById("8").innerHTML == "x" || document.getElementById("8").innerHTML == "o") &&
+                (document.getElementById("9").innerHTML == "x" || document.getElementById("9").innerHTML == "o")) {
+
+                restart.setAttribute("class", "show gap button2")
+                currentSign = "draw"
+                console.log("draw")
+
             }
+
 
             // This is about changing the sign between turns
 
@@ -171,24 +190,8 @@
 
             }
 
-            if ((document.getElementById("1").innerHTML == "x" || document.getElementById("1").innerHTML == "o") &&
-                (document.getElementById("2").innerHTML == "x" || document.getElementById("2").innerHTML == "o") &&
-                (document.getElementById("3").innerHTML == "x" || document.getElementById("3").innerHTML == "o") &&
-                (document.getElementById("4").innerHTML == "x" || document.getElementById("4").innerHTML == "o") &&
-                (document.getElementById("5").innerHTML == "x" || document.getElementById("5").innerHTML == "o") &&
-                (document.getElementById("6").innerHTML == "x" || document.getElementById("6").innerHTML == "o") &&
-                (document.getElementById("7").innerHTML == "x" || document.getElementById("7").innerHTML == "o") &&
-                (document.getElementById("8").innerHTML == "x" || document.getElementById("8").innerHTML == "o") &&
-                (document.getElementById("9").innerHTML == "x" || document.getElementById("9").innerHTML == "o")) {
-
-                restart.setAttribute("class", "show gap button2")
-
-            }
-
-
             messageElement = document.getElementById("message")
             messageElement.innerHTML = currentSign
-            console.log("after:", element.innerHTML)
         }
 
     </script>
