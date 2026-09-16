@@ -88,7 +88,7 @@
 
             if (element.innerHTML == "") {
 
-                element.innerHTML = currentSign
+                // The one below is about all the buttons having a sign, so it will show the restart button
 
                 if ((document.getElementById("1").innerHTML == "x" || document.getElementById("1").innerHTML == "o") &&
                     (document.getElementById("2").innerHTML == "x" || document.getElementById("2").innerHTML == "o") &&
@@ -101,6 +101,8 @@
                     (document.getElementById("9").innerHTML == "x" || document.getElementById("9").innerHTML == "o")) {
 
                     restart.setAttribute("class", "show gap button2")
+
+                    // The one below is about the winner, so it will show the restart button
 
                 } else if ((document.getElementById("1").innerHTML == "x" && document.getElementById("2").innerHTML == "x" && document.getElementById("3").innerHTML == "x") ||
                     (document.getElementById("4").innerHTML == "x" && document.getElementById("5").innerHTML == "x" && document.getElementById("6").innerHTML == "x") ||
@@ -121,11 +123,39 @@
 
                     restart.setAttribute("class", "show gap button2")
 
+                    // If no one won yet and all the buttons don't have a sign the restart button must be hidden
+
                 } else {
 
+                    element.innerHTML = currentSign
                     restart.setAttribute("class", "hide ")
 
                 }
+
+                // This is to check is there is a winner after the winner has placed the last sign
+
+                if ((document.getElementById("1").innerHTML == "x" && document.getElementById("2").innerHTML == "x" && document.getElementById("3").innerHTML == "x") ||
+                    (document.getElementById("4").innerHTML == "x" && document.getElementById("5").innerHTML == "x" && document.getElementById("6").innerHTML == "x") ||
+                    (document.getElementById("7").innerHTML == "x" && document.getElementById("8").innerHTML == "x" && document.getElementById("9").innerHTML == "x") ||
+                    (document.getElementById("1").innerHTML == "x" && document.getElementById("4").innerHTML == "x" && document.getElementById("7").innerHTML == "x") ||
+                    (document.getElementById("2").innerHTML == "x" && document.getElementById("5").innerHTML == "x" && document.getElementById("8").innerHTML == "x") ||
+                    (document.getElementById("3").innerHTML == "x" && document.getElementById("6").innerHTML == "x" && document.getElementById("9").innerHTML == "x") ||
+                    (document.getElementById("1").innerHTML == "x" && document.getElementById("5").innerHTML == "x" && document.getElementById("9").innerHTML == "x") ||
+                    (document.getElementById("3").innerHTML == "x" && document.getElementById("5").innerHTML == "x" && document.getElementById("7").innerHTML == "x") ||
+                    (document.getElementById("1").innerHTML == "o" && document.getElementById("2").innerHTML == "o" && document.getElementById("3").innerHTML == "o") ||
+                    (document.getElementById("4").innerHTML == "o" && document.getElementById("5").innerHTML == "o" && document.getElementById("6").innerHTML == "o") ||
+                    (document.getElementById("7").innerHTML == "o" && document.getElementById("8").innerHTML == "o" && document.getElementById("9").innerHTML == "o") ||
+                    (document.getElementById("1").innerHTML == "o" && document.getElementById("4").innerHTML == "o" && document.getElementById("7").innerHTML == "o") ||
+                    (document.getElementById("2").innerHTML == "o" && document.getElementById("5").innerHTML == "o" && document.getElementById("8").innerHTML == "o") ||
+                    (document.getElementById("3").innerHTML == "o" && document.getElementById("6").innerHTML == "o" && document.getElementById("9").innerHTML == "o") ||
+                    (document.getElementById("1").innerHTML == "o" && document.getElementById("5").innerHTML == "o" && document.getElementById("9").innerHTML == "o") ||
+                    (document.getElementById("3").innerHTML == "o" && document.getElementById("5").innerHTML == "o" && document.getElementById("7").innerHTML == "o")) {
+
+                    restart.setAttribute("class", "show gap button2")
+
+                }
+
+                // This is about changing the sign between turns
 
                 if (currentSign == "x") {
 
@@ -139,10 +169,23 @@
 
             }
 
-            let messageElement = document.getElementById("message")
+            if ((document.getElementById("1").innerHTML == "x" || document.getElementById("1").innerHTML == "o") &&
+                (document.getElementById("2").innerHTML == "x" || document.getElementById("2").innerHTML == "o") &&
+                (document.getElementById("3").innerHTML == "x" || document.getElementById("3").innerHTML == "o") &&
+                (document.getElementById("4").innerHTML == "x" || document.getElementById("4").innerHTML == "o") &&
+                (document.getElementById("5").innerHTML == "x" || document.getElementById("5").innerHTML == "o") &&
+                (document.getElementById("6").innerHTML == "x" || document.getElementById("6").innerHTML == "o") &&
+                (document.getElementById("7").innerHTML == "x" || document.getElementById("7").innerHTML == "o") &&
+                (document.getElementById("8").innerHTML == "x" || document.getElementById("8").innerHTML == "o") &&
+                (document.getElementById("9").innerHTML == "x" || document.getElementById("9").innerHTML == "o")) {
+
+                restart.setAttribute("class", "show gap button2")
+
+            }
+
+            messageElement = document.getElementById("message")
             messageElement.innerHTML = currentSign
             console.log("after:", element.innerHTML)
-
         }
 
     </script>
