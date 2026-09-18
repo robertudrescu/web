@@ -1,0 +1,130 @@
+body {
+    background-color: white;
+}
+
+.x {
+    display: flex;
+    flex-direction: row;
+}
+
+.y {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    height: 8rem;
+    width: 8rem;
+    background-color: darkgray;
+}
+
+@media (max-width: 900px) {
+
+    button {
+        height: 7rem;
+        width: 7rem;
+    }
+
+}
+
+@media (max-width: 580px) {
+
+    button {
+        height: 6rem;
+        width: 6rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    button {
+        height: 5rem;
+        width: 5rem;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    button {
+        height: 4rem;
+        width: 4rem;
+    }
+
+}
+
+.button2 {
+    height: 3rem;
+    width: 9rem;
+    background-color: darkgray;
+    font-family: Luminari;
+    font-size: 1.8rem;
+
+}
+
+
+.gap {
+    display: flex;
+    gap: 1rem;
+}
+
+.x-center {
+    align-items: center;
+}
+
+.y-center {
+    justify-content: center;
+}
+
+.h-full {
+    height: 100vh;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.cyan {
+    background-color: cyan;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    visibility: visible;
+}
+
+.luminari {
+    font-family: Luminari;
+}
+
+.font-size2 {
+    font-size: 2rem;
+}

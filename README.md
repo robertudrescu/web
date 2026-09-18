@@ -37,19 +37,6 @@ trebuie sa pui for la label input
 
     coming soon
 
-# Grow taller
-
-
-    - don't be fat
-    - eat enough
-    - fast 20h+ –> sprint 6x20s –> natural sugars (ex: smoothie)
-    - drink raw milk
-    - taurine (ex: dark meat), glycine (meat, fish, dairy), magnesium (seeds, nuts,fish, dark chocolate), zinc (meat, dairy, nuts)
-    - eat raw carrots
-    - consume bone broth
-    - fix anterior pelvic tilt (ex: back extensions, lunge stretch)
-    - dead hang (better with hook grip attachments)
-
 # Display: none
 
     element disappears
@@ -58,3 +45,22 @@ trebuie sa pui for la label input
 
     getElement.setAttribute("name of attribute", "value of attribute")
 
+
+#  <script>
+
+        const color = document.getElementById("1").getAttribute("memocolor");
+        console.log("color:", color);
+
+        document.getElementById("1").setAttribute("style", "background-color: " + color + ";")
+        
+    </script>
+
+    <div class="gap">
+            <button memocolor="red" id="1" onclick="play(event)"></button>
+    </div>
+
+    function play(e) {
+
+            e.target.removeAttribute("style");
+
+    }
