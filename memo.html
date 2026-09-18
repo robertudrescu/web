@@ -14,34 +14,38 @@
 
     <div class="y gap x-center y-center h-full">
 
-        <div class="luminari font-size2 hide" id="2">Someone won</div>
+        <div class="x">
+            <div class="luminari font-size1-8" id="player1"></div>
+            <div class="luminari font-size1-8" id="player2"></div>
+        </div>
+        <div class="luminari font-size2" id="2"></div>
 
         <div class="gap">
+            <button memocolor="yellow" onclick="play(event)"></button>
             <button memocolor="green" onclick="play(event)"></button>
+            <button memocolor="purple" onclick="play(event)"></button>
+            <button memocolor="red" onclick="play(event)"></button>
+        </div>
+
+        <div class="gap">
+            <button memocolor="pink" onclick="play(event)"></button>
+            <button memocolor="blue" onclick="play(event)"></button>
+            <button memocolor="pink" onclick="play(event)"></button>
             <button memocolor="green" onclick="play(event)"></button>
+        </div>
+
+        <div class="gap">
             <button memocolor="red" onclick="play(event)"></button>
-            <button memocolor="red" onclick="play(event)"></button>
+            <button memocolor="yellow" onclick="play(event)"></button>
+            <button memocolor="purple" onclick="play(event)"></button>
+            <button memocolor="cyan" onclick="play(event)"></button>
         </div>
 
         <div class="gap">
             <button memocolor="blue" onclick="play(event)"></button>
-            <button memocolor="blue" onclick="play(event)"></button>
-            <button memocolor="pink" onclick="play(event)"></button>
-            <button memocolor="pink" onclick="play(event)"></button>
-        </div>
-
-        <div class="gap">
-            <button memocolor="yellow" onclick="play(event)"></button>
-            <button memocolor="yellow" onclick="play(event)"></button>
-            <button memocolor="purple" onclick="play(event)"></button>
-            <button memocolor="purple" onclick="play(event)"></button>
-        </div>
-
-        <div class="gap">
-            <button memocolor="orange" onclick="play(event)"></button>
             <button memocolor="orange" onclick="play(event)"></button>
             <button memocolor="cyan" onclick="play(event)"></button>
-            <button memocolor="cyan" onclick="play(event)"></button>
+            <button memocolor="orange" onclick="play(event)"></button>
         </div>
 
         <button class="gap button2 y-center x-center hide" id="1" onclick="flipBack(event)">Flip back</button>
@@ -51,18 +55,22 @@
     <script>
 
         let currentCount = 0
-        let greenElement1
-        let greenElement2
+        let colorElement1
+        let colorElement2
         let flip = document.getElementById("1")
-        let win = document.getElementById("2")
         let color1
         let color2
+        let score1 = 0
+        let score2 = 0
+        let turn = 1
         let totalCount = 0
 
         function play(e) {
 
             let element = e.target
             let color = element.getAttribute("memocolor")
+            let win = document.getElementById("2")
+            let winText
 
             if (currentCount == 0) {
 
@@ -106,7 +114,7 @@
 
                     element.setAttribute("class", color)
                     currentCount = currentCount + 1
-                    greenElement1 = e.target
+                    colorElement1 = e.target
                 }
 
             } else if (currentCount == 1) {
@@ -151,7 +159,7 @@
 
                     element.setAttribute("class", color)
                     currentCount = currentCount + 1
-                    greenElement2 = e.target
+                    colorElement2 = e.target
                 }
 
                 if (color1 == color2) {
@@ -159,7 +167,26 @@
                     currentCount = 0
                     totalCount = totalCount + 1
 
+                    if (turn == 1) {
+
+                        score1 = score1 + 1
+
+                    } else if (turn == 2) {
+
+                        score2 = score2 + 1
+                    }
+
                 } else {
+
+                    if (turn == 2) {
+
+                        turn = 1
+
+                    } else if (turn == 1) {
+
+                        turn = 2
+
+                    }
 
                     flip.setAttribute("class", "show button2")
 
@@ -167,11 +194,32 @@
 
                 if (totalCount == 8) {
 
-                    win.setAttribute("class", "show luminari font-size2")
+                    if (score1 == score2) {
+
+                        winMessage = "Draw"
+
+                    } else if (score1 > score2) {
+
+                        winMessage = "Player 1 won"
+
+                    } else if (score1 < score2) {
+
+                        winMessage = "Player 2 won"
+
+                    }
+
+                    win.innerHTML = winMessage
 
                 }
 
             }
+
+            let message1 = "P1 score: " + score1
+            let message2 = "P2 score: " + score2
+            let messageElement1 = document.getElementById("player1")
+            let messageElement2 = document.getElementById("player2")
+            messageElement1.innerHTML = message1
+            messageElement2.innerHTML = message2
 
         }
 
@@ -179,8 +227,8 @@
 
             if (currentCount == 2) {
 
-                greenElement1.removeAttribute("class")
-                greenElement2.removeAttribute("class")
+                colorElement1.removeAttribute("class")
+                colorElement2.removeAttribute("class")
                 currentCount = 0
                 flip.setAttribute("class", "hide")
 
