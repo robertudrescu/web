@@ -70,97 +70,24 @@
             let element = e.target
             let color = element.getAttribute("memocolor")
             let win = document.getElementById("2")
-            let winText
+            let winMessage
 
             if (currentCount == 0) {
 
-                color1 = 0
+                color1 = color
 
-                if (element.getAttribute("class") == null) {
+                element.setAttribute("class", color)
+                currentCount = currentCount + 1
+                colorElement1 = e.target
 
-                    if (color == "green") {
+            } else if (currentCount == 1 && element.getAttribute("class") == null) {
 
-                        color1 = 1
+                color2 = color
 
-                    } else if (color == "red") {
+                element.setAttribute("class", color)
+                currentCount = currentCount + 1
+                colorElement2 = e.target
 
-                        color1 = 2
-
-                    } else if (color == "blue") {
-
-                        color1 = 3
-
-                    } else if (color == "pink") {
-
-                        color1 = 4
-
-                    } else if (color == "yellow") {
-
-                        color1 = 5
-
-                    } else if (color == "purple") {
-
-                        color1 = 6
-
-                    } else if (color == "orange") {
-
-                        color1 = 7
-
-                    } else if (color == "cyan") {
-
-                        color1 = 8
-
-                    }
-
-                    element.setAttribute("class", color)
-                    currentCount = currentCount + 1
-                    colorElement1 = e.target
-                }
-
-            } else if (currentCount == 1) {
-
-                color2 = 0
-
-                if (color == "green") {
-
-                    color2 = 1
-
-                } else if (color == "red") {
-
-                    color2 = 2
-
-                } else if (color == "blue") {
-
-                    color2 = 3
-
-                } else if (color == "pink") {
-
-                    color2 = 4
-
-                } else if (color == "yellow") {
-
-                    color2 = 5
-
-                } else if (color == "purple") {
-
-                    color2 = 6
-
-                } else if (color == "orange") {
-
-                    color2 = 7
-
-                } else if (color == "cyan") {
-
-                    color2 = 8
-
-                }
-
-                if (element.getAttribute("class") == null) {
-
-                    element.setAttribute("class", color)
-                    currentCount = currentCount + 1
-                    colorElement2 = e.target
-                }
 
                 if (color1 == color2) {
 
@@ -189,7 +116,6 @@
                     }
 
                     flip.setAttribute("class", "show button2")
-
                 }
 
                 if (totalCount == 8) {
@@ -202,7 +128,7 @@
 
                         winMessage = "Player 1 won"
 
-                    } else if (score1 < score2) {
+                    } else {
 
                         winMessage = "Player 2 won"
 
@@ -211,7 +137,6 @@
                     win.innerHTML = winMessage
 
                 }
-
             }
 
             let message1 = "P1 score: " + score1
@@ -220,7 +145,6 @@
             let messageElement2 = document.getElementById("player2")
             messageElement1.innerHTML = message1
             messageElement2.innerHTML = message2
-
         }
 
         function flipBack() {
